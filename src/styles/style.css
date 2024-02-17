@@ -1,0 +1,723 @@
+.main-header {
+    background: rgb(247, 212, 198);
+    height: auto;
+}
+
+body {
+    position: relative;
+}
+
+.main-header-container, .news-container, .projects-container, .our-pets-container, .help-pets-container {
+    max-width: 1100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+
+.header__links, .header__links--info, .header__links--media, .header__links--profile, .header-info__item, .header-navigation, .header-navigation__navigation {
+    display: flex;
+    align-items: center;
+}
+
+.header__links {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+
+.header__links--info {
+    gap: 52px;
+}
+
+.header__links--media {
+    margin-right: auto;
+    margin-left: 50px;
+    gap: 23px;
+}
+
+.header__links--profile {
+    gap: 55px;
+}
+
+.header-navigation__logo {
+    max-width: 71px;
+    height: auto;
+}
+
+.header-info__item {
+    gap: 3px;
+}
+
+.header-info__text {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;   
+}
+
+.header-navigation {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: space-between;
+}
+
+.header-navigation__navigation {
+    gap: 33px;
+}
+
+.main-header__border {
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    left: 0;
+}
+
+.header-navigation__item a {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.header-navigation__main-button {
+    color: rgb(251, 239, 223);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 10px 30px;
+    border-radius: 25px;
+    background: rgb(230, 131, 128);
+}
+
+.header-navigation__burger {
+    display: none;
+}
+
+.header__links--close-burger {
+    display: none;
+}
+
+.header__links--burger-navigation {
+    display: none;
+}
+
+.news__help-button {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+
+    @keyframes openMenu {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    @keyframes closeMenu {
+        from {
+            left: 0;
+        }
+        to {
+            left: -100%;
+        }
+    }
+
+    .main-header {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+
+    .header-navigation__burger {
+        display: block;
+        width: 60px;
+        height: auto;
+    }
+
+    .header-navigation__navigation {
+        display: none;
+    }
+
+
+    .header-navigation__logo {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    .open-burger {
+        animation-name: openMenu;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.410, 0.410, 0.385, 0.910);
+    }
+
+    .close-burger {
+        animation-name: closeMenu;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.410, 0.410, 0.385, 0.910);
+    }
+
+    .header__links {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        height: fit-content;
+        padding-top: 100px;
+        overflow:scroll;
+        top: 0;
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        background: rgb(244, 201, 183);
+    }
+
+    .header__links--info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__links--media {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .header__links--media li a img{
+        width: 45px;
+        height: auto;
+    }
+
+    .header__links--profile {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 0 auto ;
+        font-size: 30px;
+    }
+
+    .header__links--close-burger {
+        display: block;
+        width: 60px;
+        height: auto;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    
+    .header__links--burger-navigation {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 10px; 
+        margin-bottom: 45px;
+    }
+
+    .header__links--burger-navigation li {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .header-navigation__main-button {
+        display: none;
+    }
+
+    .news__help-button {
+        display: block;
+        color: rgb(251, 239, 223);
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+        text-align: left;
+        padding: 20px 40px;
+        border-radius: 25px;
+        background: rgb(230, 131, 128);
+    }
+}
+/* main */
+
+main {
+    background: rgb(251, 239, 223);
+}
+
+.card-description {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+}
+
+.card-main-text {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0%;
+    text-align: left; 
+}
+
+/* новости */
+.news {
+    padding-top: 72px;
+    padding-bottom: 69px;
+}
+
+@media (max-width: 520px) {
+    .news {
+        padding-top: 35px;
+    }
+}
+
+.news__main-news {
+    max-width: 570px;
+    border-radius: 45px;
+    background: rgb(247, 212, 198);
+    padding-bottom: 56px;
+}
+
+.news__main-news h3, .news__main-news p {
+    margin-left: 28px;
+}
+
+.main-news__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+    border-radius: 45px;
+}
+
+.main-news__pet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-right: 28px;
+}
+
+.main-news__pet--status {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgb(156, 202, 134);;
+}
+
+.news-container {
+    display: flex;
+    gap: 48px;
+}
+
+/* лист новостей */
+
+.news__news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: auto 0;
+    width: 100%;
+}
+
+@media (max-width: 630px) {
+    .news-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.news__news-list--newsname {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.main-news__description {
+    padding-right: 20px;
+}
+
+.news-list__item {
+    border-radius: 45px;
+    background: rgb(247, 212, 198);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.news__news-list--img {
+    border-radius: 45px;
+    max-width: 119px;
+    height: auto;
+}
+
+/* проекты */
+
+.projects {
+    padding-bottom: 72px;
+}
+
+.projects__main-text {
+    margin-bottom: 72px;
+
+}
+
+.projects__cards-list {
+    display: flex;
+    gap: 57px;
+}
+
+@media (max-width: 570px) {
+    .projects__cards-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.projects__card {
+    max-width: 570px;
+    border-radius: 45px;
+    background: rgb(247, 212, 198);
+}
+
+.projects-card--image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.projects-card__description--main-text {
+    margin-bottom: 24px;
+}
+
+.project-cards__description--description {
+    margin-bottom: 24px;
+}
+
+.project-cards__description--purpose-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-cards__description--purpose {
+    max-width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+.projects__card--description {
+    padding: 24px 24px 56px 24px;
+}
+
+.projects__main-text {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.project-cards__description--purpose span {
+    display: block;
+    height: 100%;
+    width: 85%;
+    background: rgb(230, 131, 128)
+}
+
+/* наши животные */
+
+.our-pets__main-text {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;   
+    margin-bottom: 72px; 
+}
+
+.our-pets__health-button {
+    border-radius: 36px;
+    background: rgb(247, 212, 198);
+    display: flex;
+    gap: 22px;
+    padding: 10px 20px;
+}
+
+.our-pets-health-button--status {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: justify; 
+    text-wrap:nowrap;   
+}
+
+.our-pets__health-buttons {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 673px) {
+    .our-pets__health-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+.our-pets__health-button--status-icon {
+    border-radius: 50%;
+}
+
+.red-icon {
+    background: rgb(211, 90, 90);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.yellow-icon {
+    background: rgb(211, 177, 90);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.green-icon {
+    width: 24px;
+    height: 24px;
+    background: rgb(156, 202, 134);
+    border-radius: 50%;
+}
+
+.our-pets__pets-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 39px;
+}
+
+@media (max-width: 855px) {
+    .our-pets__pets-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto
+    }
+}
+
+.our-pets__pet-item {
+    max-width: 373px;
+    height: auto;
+    border-radius: 45px;
+    background: rgb(247, 212, 198);
+}
+
+.our-pets__pet-item--image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 45px;
+}
+
+.our-pets__pet-description--status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 15px;
+}
+
+.our-pets__pet-item--pet-description {
+    padding: 24px 24px 56px 24px;
+}
+
+.our-pets {
+    padding-bottom: 144px;
+}
+
+/* оказать помощь и помочь вещами */
+
+.help-pets__item {
+    max-width: 569px;
+    height: fit-content;
+    border-radius: 45px;
+    background: rgb(247, 212, 198);
+    padding: 47px 44px 40px 19px;
+}
+
+.help-pets__list {
+    display: flex;
+    gap: 93px;
+    justify-content: space-between; 
+}
+
+@media (max-width: 1007px) {
+    .help-pets__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+}
+
+.help-pets__form--inputs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.help-pets__form--legend {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 24px;
+    max-width: 318px;
+}
+
+#help-pets__form--money, #help-pets__form--email{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    border-radius: 45px;
+    background: rgb(251, 239, 223);
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+}
+
+.help-pets__form--buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 130px;
+}
+
+@media (max-width: 557px) {
+    .help-pets__form--buttons {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+.help-pets__form--button-submit {
+    border-radius: 25px;
+    background: rgb(230, 131, 128);
+    color: rgb(247, 212, 198);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 10px 30px;
+    text-wrap:nowrap;
+}
+
+
+.help-pets__form--button-register {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.help-pets__item h3 {
+    color: rgb(68, 68, 68);
+    font-family: Soyuz Grotesk;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.help-pets__need-list, .help-pets__need-description {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+}
+
+.help-pets__need-list ul li {
+    list-style-type: circle;
+}
+
+.help-pets__need-list ul {
+    padding-left: 24px;
+}
+
+.help-pets__need-list--item {
+    list-style-type: decimal;
+}
+
+.help-pets__info {
+    color: rgb(68, 68, 68);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: justify;
+}
+
+.help-pets__need-description {
+    margin-bottom: 24px;
+}
+
+.help-pets__item ol {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}

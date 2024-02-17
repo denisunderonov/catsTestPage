@@ -185,6 +185,7 @@ body {
         gap: 20px;
         align-items: start;
         background: rgb(244, 201, 183);
+        padding-bottom: 25px;
     }
 
     .header__links--info {
@@ -210,6 +211,7 @@ body {
         align-items: center;
         margin: 0 auto ;
         font-size: 30px;
+        order: -1;
     }
 
     .header__links--close-burger {
